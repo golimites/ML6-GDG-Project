@@ -8,6 +8,7 @@ from geopy.distance import geodesic
 #Local Imports
 from timeNumerizer import TimeNumerizer
 from data_reader import DataReader
+from location_check import LocationChecker
 
 #Create a databse to go off of using pandas
 # >>> TODO:
@@ -49,6 +50,12 @@ print(df[["user_id", "timestamp", "hour_of_day", "days_since_last_login", "flag_
 
 Ex = "2026-10-27T15:00:00"
 print(TimeNumerizer.date_to_num(Ex), TimeNumerizer.time_to_num(Ex))
+
+# Locatio-Numeration: check whether coordinates are within the configured area
+location_checker = LocationChecker.from_config({
+    "name": "Dallas", "lat": 32.7767, "lon": -96.7970, "radius_km": 40,
+})
+print(location_checker.check_data({"lat": 32.9126, "lon": -96.6389}))
 
 #prototype anomaly detection program
 # print(df)
