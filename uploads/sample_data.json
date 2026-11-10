@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": "2026-09-01T09:12:00",
+    "user_id": "USR_001",
+    "location": "Dallas_US",
+    "device_type": "MacOS_Laptop",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.14"
+  },
+  {
+    "timestamp": "2026-09-01T13:40:00",
+    "user_id": "USR_001",
+    "location": "Dallas_US",
+    "device_type": "iPhone_Mobile",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.14"
+  },
+  {
+    "timestamp": "2026-09-02T08:50:00",
+    "user_id": "USR_002",
+    "location": "Austin_US",
+    "device_type": "Windows_PC",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.22"
+  },
+  {
+    "timestamp": "2026-09-02T09:05:00",
+    "user_id": "USR_002",
+    "location": "Austin_US",
+    "device_type": "Windows_PC",
+    "login_success": true,
+    "failed_attempts": 1,
+    "ip_address": "198.51.100.22"
+  },
+  {
+    "timestamp": "2026-09-02T03:12:00",
+    "user_id": "USR_003",
+    "location": "Tokyo_JP",
+    "device_type": "Tor_Browser_Windows",
+    "login_success": false,
+    "failed_attempts": 8,
+    "ip_address": "185.220.101.5"
+  },
+  {
+    "timestamp": "2026-09-02T10:00:00",
+    "user_id": "USR_004",
+    "location": "Houston_US",
+    "device_type": "MacOS_Laptop",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.35"
+  },
+  {
+    "timestamp": "2026-09-02T10:24:00",
+    "user_id": "USR_004",
+    "location": "London_UK",
+    "device_type": "Unknown_Linux_Box",
+    "login_success": false,
+    "failed_attempts": 2,
+    "ip_address": "82.165.197.1"
+  },
+  {
+    "timestamp": "2026-09-02T14:30:00",
+    "user_id": "USR_005",
+    "location": "Chicago_US",
+    "device_type": "Android_Mobile",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.88"
+  },
+  {
+    "timestamp": "2026-09-02T18:15:00",
+    "user_id": "USR_005",
+    "location": "Chicago_US",
+    "device_type": "Android_Mobile",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.88"
+  },
+  {
+    "timestamp": "2026-09-03T19:04:00",
+    "user_id": "USR_006",
+    "location": "Dallas_US",
+    "device_type": "Automated_Script_Python",
+    "login_success": false,
+    "failed_attempts": 15,
+    "ip_address": "45.154.255.80"
+  },
+  {
+    "timestamp": "2026-09-03T09:10:00",
+    "user_id": "USR_007",
+    "location": "NewYork_US",
+    "device_type": "MacOS_Laptop",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.99"
+  },
+  {
+    "timestamp": "2026-09-03T12:00:00",
+    "user_id": "USR_007",
+    "location": "NewYork_US",
+    "device_type": "iPhone_Mobile",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.99"
+  },
+  {
+    "timestamp": "2026-09-03T15:30:00",
+    "user_id": "USR_008",
+    "location": "SanFrancisco_US",
+    "device_type": "Windows_PC",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.110"
+  },
+  {
+    "timestamp": "2026-09-04T04:10:00",
+    "user_id": "USR_008",
+    "location": "Frankfurt_DE",
+    "device_type": "Tor_Browser_Windows",
+    "login_success": false,
+    "failed_attempts": 6,
+    "ip_address": "185.220.102.8"
+  },
+  {
+    "timestamp": "2026-09-04T10:00:00",
+    "user_id": "USR_009",
+    "location": "Austin_US",
+    "device_type": "MacOS_Laptop",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.120"
+  },
+  {
+    "timestamp": "2026-09-04T16:20:00",
+    "user_id": "USR_009",
+    "location": "Austin_US",
+    "device_type": "MacOS_Laptop",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.120"
+  },
+  {
+    "timestamp": "2026-09-04T11:15:00",
+    "user_id": "USR_010",
+    "location": "Houston_US",
+    "device_type": "Windows_PC",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.130"
+  },
+  {
+    "timestamp": "2026-09-04T14:45:00",
+    "user_id": "USR_010",
+    "location": "Houston_US",
+    "device_type": "Windows_PC",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.130"
+  },
+  {
+    "timestamp": "2026-09-05T09:00:00",
+    "user_id": "USR_011",
+    "location": "Dallas_US",
+    "device_type": "MacOS_Laptop",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.140"
+  },
+  {
+    "timestamp": "2026-09-05T13:10:00",
+    "user_id": "USR_011",
+    "location": "Dallas_US",
+    "device_type": "iPhone_Mobile",
+    "login_success": true,
+    "failed_attempts": 0,
+    "ip_address": "198.51.100.140"
+  }
+]

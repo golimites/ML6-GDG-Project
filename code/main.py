@@ -85,23 +85,44 @@ def findAnomalies(
             rows = df["user_id"] == userProf
             df.loc[rows, "flagged"] = isolationForest(df[rows])
 
+        #what category got each login flagged
+    rows = df.to_dict("records")
+    categories = []
+    for row in rows:
+        found = []
+        if row["hour_of_day"] < 6:
+            found.append("Off-hours")
+        if row["flag_device"] == 1:
+            found.append("Risky device")
+        if row["failed_attempts"] > 0:
+            found.append("Failed attempts")
+        if row["impossible_travel_anomaly"]:
+            found.append("Impossible travel")
+        if len(found) == 0:
+            found.append("Unusual pattern")
+        categories.append(", ".join(found))
+    df["category"] = categories
+
     return df
 
-if len(sys.argv) > 1:
-    file_path = sys.argv[1]
-else:
-    file_path = "sample_data.json"
 
-results = findAnomalies(file_path)
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        file_path = sys.argv[1]
+    else:
+        file_path = "sample_data.json"
 
-flagged = results[results["flagged"] == 1]
-print(flagged[["user_id", "timestamp", "location", "device_type", "speed_mph"]])
+    results = findAnomalies(file_path)
 
-if "is_anomaly" in results.columns:
-    print("Precision:", precision_score(results["is_anomaly"], results["flagged"]))
-    print("Recall:", recall_score(results["is_anomaly"], results["flagged"]))
+    flagged = results[results["flagged"] == 1]
+    print(flagged[["user_id", "timestamp", "location", "device_type", "speed_mph"]])
 
-results.to_csv("results.csv", index = False)
+    if "is_anomaly" in results.columns:
+        print("Precision:", precision_score(results["is_anomaly"], results["flagged"]))
+        print("Recall:", recall_score(results["is_anomaly"], results["flagged"]))
+
+    results.to_csv("results.csv", index = False)
+
 
 #Create a databse to go off of using pandas
 # >>> TODO:
