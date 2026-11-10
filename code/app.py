@@ -1,5 +1,4 @@
 import streamlit as st
-<<<<<<< HEAD
 from main import findAnomalies
 from pathlib import Path
 
@@ -24,6 +23,3 @@ if uploaded is not None:
 
 # path = st.session_state.get("uploaded_file_path")
 # if path:
-    
-=======
->>>>>>> a30e33d016156caa90c7ffd8cbd91c22c12b8d63
