@@ -1,6 +1,9 @@
 #Imports
 import sys
+import ssl
 import time
+import certifi
+import geopy.geocoders
 import pandas as pd
 from datetime import datetime
 from sklearn.ensemble import IsolationForest
@@ -14,6 +17,9 @@ from timeNumerizer import TimeNumerizer
 from data_reader import DataReader
 from velocityNumerizer import velocityNumerizer
 from location_check import LocationChecker
+
+# Use certifi's certificates for location lookups; some Python installs (like python.org on Mac) have none
+geopy.geocoders.options.default_ssl_context = ssl.create_default_context(cafile = certifi.where())
 
 
 things_to_flag = ["hour_of_day", "days_since_last_login", "flag_device", "failed_attempts", "speed_mph"]
@@ -32,8 +38,10 @@ def cleanLocation(location):
     return name.replace("_", ", ")
 
 def findAnomalies(
-    file_path: str
+    file_path: str,
+    on_progress = None
 ):
+    # on_progress(done, total, user_id, user_table) is called after each user is processed, so a UI can show progress
     
     #seperate by user
     df = DataReader.read(file_path)
@@ -71,6 +79,8 @@ def findAnomalies(
             
         velocity = velocityNumerizer.detect_impossible_travel(userDict[userProf], geolocator = geolocator)
         userTables.append(velocity)
+        if on_progress:
+            on_progress(len(userTables), len(userDict), userProf, velocity)
         time.sleep(1)
 
     df = pd.concat(userTables, ignore_index = True)
